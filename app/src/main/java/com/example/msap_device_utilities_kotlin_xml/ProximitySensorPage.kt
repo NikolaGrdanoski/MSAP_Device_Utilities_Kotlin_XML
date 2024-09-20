@@ -68,8 +68,9 @@ class ProximitySensorPage : AppCompatActivity(), SensorEventListener {
 
     private fun brightness(brightness: Float): Any {
         return when (brightness.toInt()) {
-            0 -> if (!lock.isHeld) lock.acquire(10*60*1000L /*10 minutes*/) else {}
-            else -> if (lock.isHeld) lock.release() else {}
+            0 -> if (!lock.isHeld) lock.acquire() else {}
+            5 -> if (lock.isHeld) lock.release() else {}
+            else -> {}
         }
     }
 }

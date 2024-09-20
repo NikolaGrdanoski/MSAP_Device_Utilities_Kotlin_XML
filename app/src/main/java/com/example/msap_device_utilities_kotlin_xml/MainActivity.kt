@@ -20,11 +20,6 @@ import androidx.core.view.WindowInsetsCompat
 
 
 class MainActivity : AppCompatActivity() {
-    private var sharedPrefFile = "com.example.android.MSAP_Device_Utilities_Kotlin"
-    private var mPreferences: SharedPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE)
-    private var THEME_KEY = "theme"
-    private lateinit var listener: SharedPreferences.OnSharedPreferenceChangeListener
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -47,11 +42,8 @@ class MainActivity : AppCompatActivity() {
 
         //val pageTheme = findViewById(R.id.main)
 
-        var mTheme = ContextCompat.getColor(this, R.color.white)
-
         val toolbar: Toolbar = findViewById(R.id.appbar)
 
-        val main: LinearLayout = findViewById(R.id.main)
 
         /*listener = SharedPreferences.OnSharedPreferenceChangeListener() {
             fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences, key: String) {
@@ -59,7 +51,7 @@ class MainActivity : AppCompatActivity() {
             }
         }*/
 
-        listener =
+        /*listener =
             OnSharedPreferenceChangeListener { sharedPreferences, key ->
                 if (key === THEME_KEY) {
                     Toast.makeText(
@@ -72,7 +64,7 @@ class MainActivity : AppCompatActivity() {
 
         mTheme = mPreferences.getInt(THEME_KEY, mTheme)
 
-        main.setBackgroundColor(mTheme)
+        main.setBackgroundColor(mTheme)*/
 
         val btn1: Button = findViewById(R.id.btn1)
         val btn2: Button = findViewById(R.id.btn2)
@@ -96,7 +88,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onPause() {
         super.onPause()
-        var preferencesEditor: SharedPreferences.Editor = mPreferences.edit()
-        preferencesEditor.putInt("theme", 1)
+        /*var preferencesEditor: SharedPreferences.Editor = mPreferences.edit()
+        preferencesEditor.putInt("theme", 1)*/
     }
 }
