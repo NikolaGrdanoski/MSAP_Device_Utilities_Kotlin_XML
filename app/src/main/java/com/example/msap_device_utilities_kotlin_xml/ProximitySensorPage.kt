@@ -49,6 +49,7 @@ class ProximitySensorPage : AppCompatActivity(), SensorEventListener {
             currentLux = event.values[0]
 
             text1.text = "If sensor is covered, the screen will be disabled"
+            brightness(currentLux)
         }
     }
 
