@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/batteryText"
-        android:textColor="@color/yellow"/>
+        android:textColor="@color/orange"/>
 
     <TextView
         android:layout_width="wrap_content"

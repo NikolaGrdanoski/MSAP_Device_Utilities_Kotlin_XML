@@ -85,12 +85,15 @@ class BatteryPage : AppCompatActivity() {
         }
         if (bh2) {
             text3.text = "Battery is dead"
+            text3.setTextColor(Color.RED)
         }
         if (bh3) {
             text3.text = "Battery is overheating"
+            text3.setTextColor(Color.RED)
         }
         if (bh4) {
             text3.text = "Battery has higher voltage"
+            text3.setTextColor(Color.RED)
         }
         if (bh5) {
             text3.text = "Battery unknown"
