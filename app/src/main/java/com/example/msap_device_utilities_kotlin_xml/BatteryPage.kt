@@ -68,5 +68,32 @@ class BatteryPage : AppCompatActivity() {
                 chargePlugText.text = "Device is charging with AC"
             }
         }
+
+        val bh: Boolean = status == BatteryManager.BATTERY_HEALTH_COLD
+        val bh1: Boolean = status == BatteryManager.BATTERY_HEALTH_GOOD
+        val bh2: Boolean = status == BatteryManager.BATTERY_HEALTH_DEAD
+        val bh3: Boolean = status == BatteryManager.BATTERY_HEALTH_OVERHEAT
+        val bh4: Boolean = status == BatteryManager.BATTERY_HEALTH_OVER_VOLTAGE
+        val bh5: Boolean = status == BatteryManager.BATTERY_HEALTH_UNKNOWN
+
+        val text3: TextView = findViewById(R.id.text3)
+        if (bh) {
+            text3.text = "Battery temperature is cold"
+        }
+        if (bh1) {
+            text3.text = "Battery is good"
+        }
+        if (bh2) {
+            text3.text = "Battery is dead"
+        }
+        if (bh3) {
+            text3.text = "Battery is overheating"
+        }
+        if (bh4) {
+            text3.text = "Battery has higher voltage"
+        }
+        if (bh5) {
+            text3.text = "Battery unknown"
+        }
     }
 }
