@@ -1,11 +1,9 @@
 package com.example.msap_device_utilities_kotlin_xml
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.IntentFilter
 import android.graphics.Color
 import android.os.BatteryManager
-import android.os.Build
 import android.os.Bundle
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -80,23 +78,26 @@ class BatteryPage : AppCompatActivity() {
         if (bh) {
             text3.text = "Battery temperature is cold"
         }
-        if (bh1) {
+        else if (bh1) {
             text3.text = "Battery is good"
         }
-        if (bh2) {
+        else if (bh2) {
             text3.text = "Battery is dead"
             text3.setTextColor(Color.RED)
         }
-        if (bh3) {
+        else if (bh3) {
             text3.text = "Battery is overheating"
             text3.setTextColor(Color.RED)
         }
-        if (bh4) {
+        else if (bh4) {
             text3.text = "Battery has higher voltage"
             text3.setTextColor(Color.RED)
         }
-        if (bh5) {
+        else if (bh5) {
             text3.text = "Battery unknown"
+        }
+        else {
+            text3.text = "Status unknown"
         }
     }
 }

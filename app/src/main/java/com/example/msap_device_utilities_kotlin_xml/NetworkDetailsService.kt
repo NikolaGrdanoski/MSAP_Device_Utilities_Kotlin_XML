@@ -8,7 +8,6 @@ import android.os.IBinder
 import androidx.core.app.NotificationCompat
 import java.util.Timer
 import java.util.TimerTask
-import kotlin.concurrent.timer
 
 class NetworkDetailsService: Service() {
 
